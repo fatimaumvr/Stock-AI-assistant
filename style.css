@@ -54,3 +54,12 @@ width: 1250px;
 #generate:active{
     background: rgb(111, 174, 252);
 }
+
+
+#reply{display: none;
+    padding: 10px;
+    border: 2px solid black;
+    width: 500px;
+}
+
+#reply h4{text-align: center;}
