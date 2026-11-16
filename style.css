@@ -1,9 +1,12 @@
+body{margin: 0px;}
+
 #main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
 }
 
 #inner{
@@ -11,31 +14,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0px;
 }
 
 
 input{border: 1px solid black;
     line-height: 20px;
     width: 200px;
+    margin-right: 0px;
 }
 
 
-#click{background: white;
+#add{background: white;
+    text-align: center;
+    margin-left: 0px;
     border: 1px solid black;
-    padding: 10px;
-    width: 200px;}
+    padding: 4px;
+    width: 50px;}
 
 #generate{color:white;
     border: 0px;
     border-radius: 4px;
     background: rgb(183, 224, 250);
-    width: 210px;
+    height: 40px;
+    width: 190px;
+    transition: background 0.5s
 }
 
 input:active{border: 1px solid rgb(210, 247, 252);}
 
 h1{background: black;
+    padding: 10px;
+    text-align: center;
     margin-top:0px;
 color: white;
-width: 2000px;
+width: 1250px;
+}
+
+#generate:active{
+    background: rgb(111, 174, 252);
 }
