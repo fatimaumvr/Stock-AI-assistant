@@ -32,3 +32,4 @@ export default async function adam(data){
     
 }
 
+let r
