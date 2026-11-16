@@ -1,0 +1,40 @@
+import adam from "./other.js"
+
+const input=document.getElementById('inp')
+const addBtn=document.getElementById('add')
+const generateBtn=document.getElementById('generate')
+const tickers=document.getElementById('ticks')
+const symbols=[]
+
+
+addBtn.addEventListener('click',()=>{
+    if(symbols.length<3){
+        console.log('p')
+        tickers.textContent=''
+        symbols.push(input.value)
+        symbols.forEach(e=>tickers.textContent+=' '+e)
+    }
+})
+
+
+async function stockData(){
+    try{
+const key=import.meta.env.VITE_STOCK_API_KEY
+const symbolsJoined=symbols.join(',')
+const url = `https://api.twelvedata.com/time_series?symbol=${symbolsJoined}&interval=1day&outputsize=3&apikey=${key}`;
+const fetched= await fetch(url)
+const result=await fetched.json()
+return result}
+catch(e){
+    console.log('something went wrong')
+}
+}
+
+
+generateBtn.addEventListener('click',()=>{
+    async function dataa(){
+        adam(await stockData())
+    }
+dataa()
+})
+
