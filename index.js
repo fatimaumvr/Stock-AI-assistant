@@ -19,7 +19,7 @@ addBtn.addEventListener('click',()=>{
 
 async function stockData(){
     try{
-const key='d11cfd1641c94bbfb669ef872bbfd1e6 '
+const key=import.meta.env.VITE_STOCK_API_KEY
 const symbolsJoined=symbols.join(',')
 const url = `https://api.twelvedata.com/time_series?symbol=${symbolsJoined}&interval=1day&outputsize=3&apikey=${key}`;
 const fetched= await fetch(url)

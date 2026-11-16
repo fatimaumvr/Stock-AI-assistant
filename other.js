@@ -1,7 +1,7 @@
 import Groq from "https://esm.sh/groq-sdk"
 
 const groq=new Groq({
-    apiKey:'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',
+    apiKey:import.meta.env.Vite_GROQ_API_KEY,
     dangerouslyAllowBrowser: true
 })
 
