@@ -12,15 +12,15 @@ export default async function adam(data){
     try{
     const response= await groq.chat.completions.create({
     model:'qwen/qwen3.8-27b',
-        messages:[{role:'system',content:`You are a stock broker who gives stock advice based on the data you receive from the user. And your advice should be no less than 150 words. The use would examples between the ### on how your response should be. If its just one company you get data on just give advice on that data only, dont say anything else. But if you recieve an error just say something went wrong`},
+        messages:[{role:'system',content:`You are a stock broker who gives stock advice based on the data you receive from the user. And your advice should be no less than 150 words. Use the examples between the ### to set the tone of your response. If its just one company you get data on just give advice on that data only, dont say anything else. But if you recieve an error just say something went wrong`},
             {role:'user',content:`${JSON.stringify(data)}
-             ###
-                Good day to you here is your result
-                ###
+            ###
+            Good day to you here is your result
+            ###
                 
-                ###
-                Good day to you here is my advice
-                ###`
+            ###
+            Good day to you here is my advice
+            ###`
                
             }
 

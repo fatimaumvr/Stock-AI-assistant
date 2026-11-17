@@ -33,10 +33,15 @@ catch(e){
 }
 
 
+
+
 generateBtn.addEventListener('click',()=>{
     async function dataa(){
+        const load=document.getElementById('imgg')
+         innerDiv.style.display='none'
+         load.style.display='block'
         const response=await adam(await stockData())
-        innerDiv.style.display='none'
+       load.style.display='none'
         replyDiv.style.display='block'
         responseEl.textContent=response
 

@@ -63,3 +63,14 @@ width: 1250px;
 }
 
 #reply h4{text-align: center;}
+
+
+img{display: none;
+    width: 300px;
+animation-name: spin;
+animation-duration: 1s;
+animation-iteration-count: infinite;}
+
+@keyframes spin {
+    to{transform: rotateZ(360deg);}
+}
